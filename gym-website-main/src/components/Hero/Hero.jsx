@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import BannerImg from "../../assets/hero.jpg";
-import RegistrationForm from "../Navbar/RegistrationForm"; // ✅ Import RegistrationForm
+import RegistrationForm from "../Navbar/RegistrationForm";
 import { motion } from "framer-motion";
 
 const Hero = () => {

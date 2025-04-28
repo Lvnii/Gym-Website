@@ -51,7 +51,7 @@ const RegistrationForm = () => {
 
   return (
     <div className="max-w-md mx-auto mt-8 p-6 border rounded-lg bg-white shadow-lg">
-      <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">Registration</h2>
+      <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">რეგისტრაციის ფორმა</h2>
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
         
         
