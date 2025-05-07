@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Logo from "../../assets/logo.png";
+import Logo from "../../../assets/logo.png";
 import {
   FaFacebook,
   FaInstagram,
@@ -12,17 +12,17 @@ export const Navlinks = [
   {
     id: 1,
     name: "სერვისი",
-    link: "/#services",
+    link: "/#about",
   },
   {
     id: 2,
     name: "ინფორმაცია",
-    link: "/#about",
+    link: "/information"
   },
   {
     id: 3,
     name: "გაწევრიანდი",
-    link: "/#join",
+    link: "/register",
   },
 ];
 const Footer = () => {
@@ -57,7 +57,7 @@ const Footer = () => {
                 <li key={id} className="py-4">
                   <a
                     href={link}
-                    className="inline-block text-lg font-semibold  hover:text-primary py-1 hover:border-primary transition-colors duration-300  "
+                    className="inline-block text-lg font-semibold hover:text-primary duration-300"
                   >
                     {name}
                   </a>

@@ -22,7 +22,7 @@ const TestimonialData = [
   },
   {
     id: 5,
-    name: "ქემალი",
+    name: "ანა",
     text: `Translated: "არიან ინგლისური, თურქული, რუსული და ქართული ენის მცოდნე ტრენერები `,
     img: "https://picsum.photos/103/103",
   },

@@ -1,7 +1,7 @@
 import React from "react";
-import AppStoreImg from "../../assets/website/app_store.png";
-import PlayStoreImg from "../../assets/website/play_store.png";
-import pattern from "../../assets/dumbell.jpg";
+import AppStoreImg from "../../../assets/website/app_store.png";
+import PlayStoreImg from "../../../assets/website/play_store.png";
+import pattern from "../../../assets/dumbell.jpg";
 
 const bannerImg = {
   backgroundImage: `url(${pattern})`,

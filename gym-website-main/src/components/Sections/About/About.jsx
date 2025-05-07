@@ -1,5 +1,6 @@
 import React from "react";
-import BannerImg from "../../assets/banner.png";
+import BannerImg from "../../../assets/banner.png";
+import BeginTransparent from "../BeginButton/BeginTransparent";
 
 const About = () => {
   return (
@@ -30,9 +31,7 @@ const About = () => {
               <p data-aos="fade-up" data-aos-delay="300">
                 ინვენტარი ნახლდება წელიწადში ერთხელ. ყოველი წლის ბოლოს კი გასული წლის ინვენტარი თამაშდება ჩვენს ერთგულ მომხმარებლებს შორის.
               </p>
-              <button data-aos="fade-up" className="button-outline">
-                დაიწყე აქ
-              </button>
+              <BeginTransparent />
             </div>
           </div>
         </div>

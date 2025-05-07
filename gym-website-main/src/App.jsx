@@ -1,20 +1,16 @@
 import React, { useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
-// Component import
-import Navbar from "./components/Navbar/Navbar";
-import Hero from "./components/Hero/Hero";
-import About from "./components/About/About";
-import Services from "./components/Services/Services";
-import AppStoreBanner from "./components/AppStoreBanner/AppStoreBanner";
-import Contact from "./components/Contact/Contact";
-import Experience from "./components/Experience/Experience";
-import Testimonial from "./components/Testimonials/Testimonials";
-import Footer from "./components/Footer/Footer";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Banner2 from "./components/Banner2/Banner2";
+
+import Navbar from "./components/Common/Navbar/Navbar";
+import Footer from "./components/Common/Footer/Footer";
+import Information from "./components/Pages/Information";
+import Login from "./components/Pages/Login";
+import Register from "./components/Pages/Register";
+import HomePage from "./components/Pages/Home"
 
 const App = () => {
   useEffect(() => {
@@ -24,22 +20,29 @@ const App = () => {
       easing: "ease-in-sine",
       delay: 100,
     });
-    AOS.refresh();
   }, []);
+
   return (
-    <div className="bg-white dark:bg-black dark:text-white text-black overflow-x-hidden">
-      <Navbar />
-      <Hero />
-      <About />
-      <Banner2 />
-      <About />
-      <Contact />
-      <Services />
-      <AppStoreBanner />
-      <Testimonial />
-      <Experience />
-      <Footer />
-    </div>
+    <Router>
+      <div className="bg-white dark:bg-black text-black dark:text-white overflow-x-hidden">
+        <Navbar />
+        
+        <Routes>
+          <Route path="/" element={
+            <>
+              <HomePage />
+            </>
+          } />
+          
+          <Route path="/information" element={<Information />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/home" element= {<HomePage />} />
+        </Routes>
+        
+        <Footer />
+      </div>
+    </Router>
   );
 };
 
