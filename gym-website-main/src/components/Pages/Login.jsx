@@ -1,11 +1,10 @@
 import { useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const LoginPage = () => {
   const [form, setForm] = useState({ email: "", password: "" });
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
-  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -27,12 +26,8 @@ const LoginPage = () => {
       if (!res.ok) throw new Error(data.error || "Login failed");
 
       setSuccess("შესვლა წარმატებულია!");
-      localStorage.setItem("token", data.token);
-
-      setTimeout(() => {
-        navigate("/home");
-      }, 1000);
-
+      // Optionally store token or user info in localStorage
+      // localStorage.setItem("token", data.token);
     } catch (err) {
       setError(err.message);
     }
